@@ -1,0 +1,13 @@
+site_name: "Python Project-based Based Guide"
+nav:
+  - 'Guess the Word': 
+    - p_guess_the_word.md
+  - 'Calculator':
+    - p_calculator.md
+
+theme: 
+  name: readthedocs
+  collapse_navigation: True
+
+plugins:
+  - mkdocs-video
