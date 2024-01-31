@@ -90,3 +90,8 @@ In the variable that has the **input** function, add the .lower() method.
 
 
 
+## Quiz
+
+Open the quiz below and complete it.
+
+[Quiz](https://forms.office.com/r/iDJrYjLABL)
