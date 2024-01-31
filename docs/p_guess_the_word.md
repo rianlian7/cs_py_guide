@@ -12,7 +12,7 @@ Write this starter code, run it and observe the results.
 
     print("Welcome to Guess the Word!")
     words = ["cat", "dog", "cow", "chicken", "pig", "piglet", "hamster"]
-    word_to_guess = words[randint(0, len(wordList)-1)]
+    word_to_guess = words[randint(0, len(words)-1)]
     print(f"Word to guess: {word_to_guess}")
 
 
