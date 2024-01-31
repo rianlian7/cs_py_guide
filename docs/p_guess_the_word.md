@@ -10,13 +10,13 @@ This is the word that the player will try to guess.
 
 We also create an empty list to keep track of the letters the player has guessed.
 
-    import random
+    from random import randint
 
     print("Welcome to Guess the Word!")
-    words = ["python", "programming", "computer", "science", "tutorial"]
-    word_to_guess = random.choice(words)
+    words = ["cat", "dog", "cow", "chicken", "pig", "piglet", "hamster"]
+    randomWord = wordList[randint(0, len(wordList)-1)]
     print(f"Word to guess: {word_to_guess}")
-    guessed_letters = []
+
 
 ## Step 2: Display underscores for each letter in the word
 

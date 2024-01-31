@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Project: Guess the word - Python Project-based Based Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project: Guess the word";
+        var mkdocs_page_input_path = "p_guess_the_word.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Python Project-based Based Guide
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Guess the Word</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project: Guess the word</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-set-up-the-basic-structure">Step 1: Set up the basic structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-display-underscores-for-each-letter-in-the-word">Step 2: Display underscores for each letter in the word</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-take-user-input-for-guessing-a-letter">Step 3: Take user input for guessing a letter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-check-if-the-guessed-letter-is-in-the-word">Step 4: Check if the guessed letter is in the word</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Calculator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_calculator/">Project: Calculator</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Python Project-based Based Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guess the Word</li>
+      <li class="breadcrumb-item active">Project: Guess the word</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="project-guess-the-word">Project: Guess the word</h1>
+<h2 id="step-1-set-up-the-basic-structure">Step 1: Set up the basic structure</h2>
+<p>In this step, we're getting ready to play a game called "Guess the Word." </p>
+<p>We're selecting a word randomly from a list of words related to computer science and printing it out. </p>
+<p>This is the word that the player will try to guess. </p>
+<p>We also create an empty list to keep track of the letters the player has guessed.</p>
+<pre><code>from random import randint
+
+print("Welcome to Guess the Word!")
+words = ["cat", "dog", "cow", "chicken", "pig", "piglet", "hamster"]
+randomWord = wordList[randint(0, len(wordList)-1)]
+print(f"Word to guess: {word_to_guess}")
+</code></pre>
+<h2 id="step-2-display-underscores-for-each-letter-in-the-word">Step 2: Display underscores for each letter in the word</h2>
+<p>Now, we want to show the player how many letters are in the word they need to guess. We use underscores "_" to represent each letter in the word. This step helps the player understand how long the word is, but we haven't revealed any actual letters yet.</p>
+<pre><code>display = ""
+for letter in word_to_guess:
+    if letter in guessed_letters:
+        display += letter
+    else:
+        display += "_"
+
+print(display)
+</code></pre>
+<h2 id="step-3-take-user-input-for-guessing-a-letter">Step 3: Take user input for guessing a letter</h2>
+<p>It's time for the player to make a guess! We ask the player to type in a letter, and whatever letter they type, we add it to the list of guessed letters. This is their attempt to figure out the secret word.</p>
+<pre><code>guess = input("Guess a letter: ")
+guessed_letters.append(guess)
+</code></pre>
+<h2 id="step-4-check-if-the-guessed-letter-is-in-the-word">Step 4: Check if the guessed letter is in the word</h2>
+<p>Now, we check if the letter the player guessed is actually in the secret word. If it is, we tell them it's a "Good guess!" If not, we encourage them to "Try again!" This step helps the player understand if they are moving closer to guessing the word.</p>
+<pre><code>if guess in word_to_guess:
+    print("Good guess!")
+else:
+    print("Try again!")
+</code></pre>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../p_calculator/" class="btn btn-neutral float-right" title="Project: Calculator">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="../p_calculator/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
