@@ -12,7 +12,7 @@ Write this starter code, run it and observe the results.
 
     print("Welcome to Guess the Word!")
     words = ["cat", "dog", "cow", "chicken", "pig", "piglet", "hamster"]
-    randomWord = words[randint(0, len(wordList)-1)]
+    word_to_guess = words[randint(0, len(wordList)-1)]
     print(f"Word to guess: {word_to_guess}")
 
 
@@ -76,6 +76,17 @@ In the variable that has the **input** function, add the .lower() method.
 
 
 
-## Final Code
+### Final Code
 
 ![](images/py_guess_the_word_final_code.png)
+
+
+## Challenges
+
+1. Expand the word list.
+2. Limit the amount of attempts the player can do. 
+3. Display different types of hints after every wrong attempt. (Instead of showing the first letter as the hint, show the last letter, or the middle letter)
+4. Create different word list and let the player choose which word list to do.
+
+
+

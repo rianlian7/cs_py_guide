@@ -51,8 +51,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#step-5-add-a-hint">Step 5: Add a Hint</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#step-6-make-it-case-insensitive">Step 6: Make it case-insensitive</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#final-code">Final Code</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#final-code">Final Code</a>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a>
     </li>
     </ul>
                   </li>
@@ -95,7 +99,7 @@
 
 print("Welcome to Guess the Word!")
 words = ["cat", "dog", "cow", "chicken", "pig", "piglet", "hamster"]
-randomWord = words[randint(0, len(wordList)-1)]
+word_to_guess = words[randint(0, len(wordList)-1)]
 print(f"Word to guess: {word_to_guess}")
 </code></pre>
 <h2 id="step-2-take-user-input-to-make-a-guess">Step 2: Take user input to make a guess</h2>
@@ -137,8 +141,15 @@ while True:
 <p>In the variable that has the <strong>input</strong> function, add the .lower() method.</p>
 <pre><code>userInput = input("What animal am I thinking of? ").lower()  # Convert input to lowercase
 </code></pre>
-<h2 id="final-code">Final Code</h2>
-<p><img alt="" src="../images/py_guess_the_word_final_code.png"></p></div>
+<h3 id="final-code">Final Code</h3>
+<p><img alt="" src="../images/py_guess_the_word_final_code.png"></p>
+<h2 id="challenges">Challenges</h2>
+<ol>
+<li>Expand the word list.</li>
+<li>Limit the amount of attempts the player can do. </li>
+<li>Display different types of hints after every wrong attempt. (Instead of showing the first letter as the hint, show the last letter, or the middle letter)</li>
+<li>Create different word list and let the player choose which word list to do.</li>
+</ol></div>
               
             </div>
           </div><footer>
