@@ -1,0 +1,9 @@
+.highlight.no-copy .md-clipboard { display: none; }
+
+.unselectable {
+    user-select: none;
+}
+
+code{
+    user-select: none;
+}

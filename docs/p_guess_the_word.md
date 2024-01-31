@@ -1,51 +1,81 @@
 # Project: Guess the word
 
+*Reminder*: Do not copy paste all the code in each step. Read the instructions, some code are not meant to be rewritten but to let you know where to put the new code.
+
 ## Step 1: Set up the basic structure
 
 In this step, we're getting ready to play a game called "Guess the Word." 
 
-We're selecting a word randomly from a list of words related to computer science and printing it out. 
-
-This is the word that the player will try to guess. 
-
-We also create an empty list to keep track of the letters the player has guessed.
+Write this starter code, run it and observe the results.
 
     from random import randint
 
     print("Welcome to Guess the Word!")
     words = ["cat", "dog", "cow", "chicken", "pig", "piglet", "hamster"]
-    randomWord = wordList[randint(0, len(wordList)-1)]
+    randomWord = words[randint(0, len(wordList)-1)]
     print(f"Word to guess: {word_to_guess}")
 
 
-## Step 2: Display underscores for each letter in the word
+## Step 2: Take user input to make a guess
 
-Now, we want to show the player how many letters are in the word they need to guess. We use underscores "_" to represent each letter in the word. This step helps the player understand how long the word is, but we haven't revealed any actual letters yet.
+Now, we will get the user to make a guess. We ask the player to make a guess.
 
-    display = ""
-    for letter in word_to_guess:
-        if letter in guessed_letters:
-            display += letter
-        else:
-            display += "_"
+    userInput = input("What animal am I thinking of? ")
 
-    print(display)
+## Step 3: Check if the user guess is correct.
 
-## Step 3: Take user input for guessing a letter
+To check if the user guess is correct, we use the **if...else...** statement.
 
-It's time for the player to make a guess! We ask the player to type in a letter, and whatever letter they type, we add it to the list of guessed letters. This is their attempt to figure out the secret word.
-
-    guess = input("Guess a letter: ")
-    guessed_letters.append(guess)
-
-## Step 4: Check if the guessed letter is in the word
-
-Now, we check if the letter the player guessed is actually in the secret word. If it is, we tell them it's a "Good guess!" If not, we encourage them to "Try again!" This step helps the player understand if they are moving closer to guessing the word.
-
-    if guess in word_to_guess:
-        print("Good guess!")
+    if userInput == word_to_guess:
+        print("Correct. I am thinking of", word_to_guess)
     else:
-        print("Try again!")
+        print("Wrong. I was thinking of", word_to_guess)
 
 
-![type:video](https://www.youtube.com/embed/LXb3EKWsInQ)
+Try and test out your code. It should give you the answer before the input. Enter the same answer, it should output "Correct...".
+
+Then test your code again with the wrong answer. Ensure that it output "Wrong..."
+
+
+## Step 4: Allow multiple attempts
+
+The current code only allows you to have one attempt. Let's modify the code to allow the player to make multiple attempts until they guess the correct word.
+
+To do so, we will initialise a variable named: **attempts**.
+
+Modify the current code with these code. Take note to arrange the code in the right place.
+
+    attempts = 0
+
+    while True:
+        userInput = input("What animal am I thinking of? ")
+        attempts += 1
+
+        if userInput == word_to_guess:
+            print(f"Correct! You guessed it in {attempts} attempts.")
+            break
+        else:
+            print("Wrong. Try again.")
+
+
+## Step 5: Add a Hint
+
+Let's add a hint to help the player.
+
+The hint will be displayed when the player got the wrong answer.
+
+    print(f"Hint: The word starts with '{word_to_guess[0]}' and has {len(word_to_guess)} letters.")
+
+
+## Step 6: Make it case-insensitive
+To make the input case-insensitive, so it doesn't matter if the player enters the word in uppercase or lowercase. We will use the .lower() method towards the input.
+
+In the variable that has the **input** function, add the .lower() method.
+
+    userInput = input("What animal am I thinking of? ").lower()  # Convert input to lowercase
+
+
+
+## Final Code
+
+![](images/py_guess_the_word_final_code.png)
