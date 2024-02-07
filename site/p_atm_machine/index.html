@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Project: ATM Machine - Python Project-based Based Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project: ATM Machine";
+        var mkdocs_page_input_path = "p_atm_machine.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Python Project-based Based Guide
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Guess the Word</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_guess_the_word/">Project: Guess the word</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Calculator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_calculator/">Project: Calculator</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ATM Machine</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project: ATM Machine</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-set-up-the-basic-structure">Step 1: Set Up the Basic Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-getting-the-user-input">Step 2: Getting the user input</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-output-the-balance">Step 3: Output the balance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-deposit">Step 4: Deposit</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-withdraw">Step 5: Withdraw</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-6-error-checking">Step 6: Error Checking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Python Project-based Based Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">ATM Machine</li>
+      <li class="breadcrumb-item active">Project: ATM Machine</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="project-atm-machine">Project: ATM Machine</h1>
+<p>Always read and try out your code each step.</p>
+<h2 id="step-1-set-up-the-basic-structure">Step 1: Set Up the Basic Structure</h2>
+<p>The first step of the ATM machine is to display the options for users to choose. Write the following code below.</p>
+<pre><code># Initialize balance
+balance = 0
+
+# Function to display options
+def display_options():
+    print("Select an option:")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+</code></pre>
+<h2 id="step-2-getting-the-user-input">Step 2: Getting the user input</h2>
+<p>Now, let's add the code to get input from the user within an infinite loop.</p>
+<pre><code># Start an infinite loop to keep the ATM running until the user chooses to exit
+while True:
+    # Display options to the user
+    display_options()
+
+    # Get user choice
+    choice = input("Enter choice (1-4): ")
+</code></pre>
+<h2 id="step-3-output-the-balance">Step 3: Output the balance</h2>
+<p>When the user selects the option to check balance, we need to output the current balance.</p>
+<pre><code># Check user's choice
+if choice == '1':
+    print("Your balance is: $", balance)
+</code></pre>
+<h2 id="step-4-deposit">Step 4: Deposit</h2>
+<p>If the user chooses to deposit money, we need to prompt for the deposit amount and update the balance.</p>
+<pre><code>elif choice == '2':
+    deposit_amount = float(input("Enter deposit amount: $"))
+    balance += deposit_amount
+    print("Deposit successful.")
+</code></pre>
+<h2 id="step-5-withdraw">Step 5: Withdraw</h2>
+<p>For withdrawal, prompt for the withdrawal amount and update the balance, checking for sufficient funds.</p>
+<pre><code>elif choice == '3':
+    withdraw_amount = float(input("Enter withdrawal amount: $"))
+    if withdraw_amount &lt;= balance:
+        balance -= withdraw_amount
+        print("Withdrawal successful.")
+    else:
+        print("Insufficient funds.")
+</code></pre>
+<h2 id="step-6-error-checking">Step 6: Error Checking</h2>
+<p>Finally, we need to handle invalid user input by displaying an error message.</p>
+<pre><code>else:
+    print("Invalid choice. Please enter a number between 1 and 4.")
+</code></pre>
+<h2 id="challenges">Challenges</h2>
+<ol>
+<li>Add a PIN system. Before the options are displayed to the user, get the user to enter their pin. You may create a variable to store the PIN number (1HP).</li>
+<li>Add an option for converting different currency type (2HP).</li>
+<li>Add an algorithm to record down every transaction into an array(list) and add an option for user to pick to show their transaction history. (3HP)</li>
+</ol>
+<p>Send your full code to my chat for me to check and claim your house point.</p></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../p_calculator/" class="btn btn-neutral float-left" title="Project: Calculator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../p_calculator/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
