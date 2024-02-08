@@ -67,6 +67,44 @@ Finally, we need to handle invalid user input by displaying an error message.
         print("Invalid choice. Please enter a number between 1 and 4.")
 
 
+## Final Code
+
+    # Initialize balance
+    balance = 0
+
+    # Function to display options
+    def display_options():
+        print("Select an option:")
+        print("1. Check Balance")
+        print("2. Deposit")
+        print("3. Withdraw")
+        print("4. Exit")
+
+    # Start an infinite loop to keep the ATM running until the user chooses to exit
+    while True:
+        # Display options to the user
+        display_options()
+
+        # Get user choice
+        choice = input("Enter choice (1-4): ")
+        # Check user's choice
+        if choice == '1':
+            print("Your balance is: $", balance)
+        elif choice == '2':
+            deposit_amount = float(input("Enter deposit amount: $"))
+            balance += deposit_amount
+            print("Deposit successful.")
+        elif choice == '3':
+            withdraw_amount = float(input("Enter withdrawal amount: $"))
+            if withdraw_amount <= balance:
+                balance -= withdraw_amount
+                print("Withdrawal successful.")
+            else:
+                print("Insufficient funds.")
+
+        else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
+
 ## Challenges
 
 1. Add a PIN system. Before the options are displayed to the user, get the user to enter their pin. You may create a variable to store the PIN number (1HP).

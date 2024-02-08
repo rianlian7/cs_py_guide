@@ -4,6 +4,8 @@ nav:
     - p_guess_the_word.md
   - 'Calculator':
     - p_calculator.md
+  - 'Parcel Check':
+    - p_parcel_check.md
   - 'ATM Machine':
     - p_atm_machine.md
 

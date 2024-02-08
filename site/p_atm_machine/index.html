@@ -46,6 +46,11 @@
                   <li class="toctree-l1"><a class="reference internal" href="../p_calculator/">Project: Calculator</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Parcel Check</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_parcel_check/">Project: Parcel Checking</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">ATM Machine</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Project: ATM Machine</a>
@@ -61,6 +66,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#step-5-withdraw">Step 5: Withdraw</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#step-6-error-checking">Step 6: Error Checking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-code">Final Code</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a>
     </li>
@@ -144,6 +151,43 @@ if choice == '1':
 <pre><code>else:
     print("Invalid choice. Please enter a number between 1 and 4.")
 </code></pre>
+<h2 id="final-code">Final Code</h2>
+<pre><code># Initialize balance
+balance = 0
+
+# Function to display options
+def display_options():
+    print("Select an option:")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+
+# Start an infinite loop to keep the ATM running until the user chooses to exit
+while True:
+    # Display options to the user
+    display_options()
+
+    # Get user choice
+    choice = input("Enter choice (1-4): ")
+    # Check user's choice
+    if choice == '1':
+        print("Your balance is: $", balance)
+    elif choice == '2':
+        deposit_amount = float(input("Enter deposit amount: $"))
+        balance += deposit_amount
+        print("Deposit successful.")
+    elif choice == '3':
+        withdraw_amount = float(input("Enter withdrawal amount: $"))
+        if withdraw_amount &lt;= balance:
+            balance -= withdraw_amount
+            print("Withdrawal successful.")
+        else:
+            print("Insufficient funds.")
+
+    else:
+        print("Invalid choice. Please enter a number between 1 and 4.")
+</code></pre>
 <h2 id="challenges">Challenges</h2>
 <ol>
 <li>Add a PIN system. Before the options are displayed to the user, get the user to enter their pin. You may create a variable to store the PIN number (1HP).</li>
@@ -155,7 +199,7 @@ if choice == '1':
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../p_calculator/" class="btn btn-neutral float-left" title="Project: Calculator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../p_parcel_check/" class="btn btn-neutral float-left" title="Project: Parcel Checking"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -178,7 +222,7 @@ if choice == '1':
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../p_calculator/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../p_parcel_check/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
   </span>
