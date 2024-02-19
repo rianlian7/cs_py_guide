@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Project: ATM Machine - Python Project-based Based Guide</title>
+    <title>Project: Shakespeare Insult Generator - Python Project-based Based Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Project: ATM Machine";
-        var mkdocs_page_input_path = "p_atm_machine.md";
+        var mkdocs_page_name = "Project: Shakespeare Insult Generator";
+        var mkdocs_page_input_path = "p_insult_generator.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -65,31 +65,27 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">ATM Machine</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_atm_machine/">Project: ATM Machine</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shakespear Insult Generator</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project: ATM Machine</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project: Shakespeare Insult Generator</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#step-1-set-up-the-basic-structure">Step 1: Set Up the Basic Structure</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-2-getting-the-user-input">Step 2: Getting the user input</a>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-generate-insult-function">Step 2: Generate Insult Function</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-3-output-the-balance">Step 3: Output the balance</a>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-get-user-input">Step 3: Get User Input</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-4-deposit">Step 4: Deposit</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-5-withdraw">Step 5: Withdraw</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-6-error-checking">Step 6: Error Checking</a>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-generate-insults">Step 4: Generate Insults</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#final-code">Final Code</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a>
     </li>
     </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Shakespear Insult Generator</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../p_insult_generator/">Project: Shakespeare Insult Generator</a>
                   </li>
               </ul>
       </div>
@@ -106,8 +102,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">ATM Machine</li>
-      <li class="breadcrumb-item active">Project: ATM Machine</li>
+          <li class="breadcrumb-item">Shakespear Insult Generator</li>
+      <li class="breadcrumb-item active">Project: Shakespeare Insult Generator</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -116,109 +112,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div><h1 id="project-atm-machine">Project: ATM Machine</h1>
-<p>Always read and try out your code each step.</p>
+                <div><h1 id="project-shakespeare-insult-generator">Project: Shakespeare Insult Generator</h1>
+<p>This project involves creating a program that generates random insults inspired by the language of Shakespeare.</p>
 <h2 id="step-1-set-up-the-basic-structure">Step 1: Set Up the Basic Structure</h2>
-<p>The first step of the ATM machine is to display the options for users to choose. Write the following code below.</p>
-<pre><code># Initialize balance
-balance = 0
+<p>The first step is to import necessary modules and define lists of words for generating insults with a Shakespearean twist.</p>
+<pre><code>import random
 
-# Function to display options
-def display_options():
-    print("Select an option:")
-    print("1. Check Balance")
-    print("2. Deposit")
-    print("3. Withdraw")
-    print("4. Exit")
+adjectives = ['base-court', 'villainous', 'bootless', 'fusty']
+nouns = ['swag-bellied', 'flap-mouthed', 'hedge-born', 'milk-livered', 'canker-blossom']
 </code></pre>
-<h2 id="step-2-getting-the-user-input">Step 2: Getting the user input</h2>
-<p>Now, let's add the code to get input from the user within an infinite loop.</p>
-<pre><code># Start an infinite loop to keep the ATM running until the user chooses to exit
-while True:
-    # Display options to the user
-    display_options()
-
-    # Get user choice
-    choice = input("Enter choice (1-4): ")
+<h2 id="step-2-generate-insult-function">Step 2: Generate Insult Function</h2>
+<p>A <strong>function</strong> is a reusable block of code that performs a specific task. </p>
+<p>It always starts with the keyword <strong>def</strong> followed by the function name. </p>
+<p>For example: 
+<strong>def generate_insult():</strong></p>
+<p>Where <strong>def</strong> is the keyword to create function and <strong>generate_insult()</strong> is the function name.</p>
+<p>The indented code below it is the block of code that will run when we call the function in the next step. We can run this block of code anytime by calling the function</p>
+<p>Create a function to generate insults by randomly selecting adjectives and nouns from the lists.</p>
+<pre><code>def generate_insult():
+    adjective = random.choice(adjectives)
+    noun = random.choice(nouns)
+    return f"Thou {adjective} {noun}!"
 </code></pre>
-<h2 id="step-3-output-the-balance">Step 3: Output the balance</h2>
-<p>When the user selects the option to check balance, we need to output the current balance.</p>
-<pre><code># Check user's choice
-if choice == '1':
-    print("Your balance is: $", balance)
+<h2 id="step-3-get-user-input">Step 3: Get User Input</h2>
+<p>Allow the user to input the number of insults they want to generate.</p>
+<pre><code>num_insults = int(input("Enter the number of insults to generate: "))
 </code></pre>
-<h2 id="step-4-deposit">Step 4: Deposit</h2>
-<p>If the user chooses to deposit money, we need to prompt for the deposit amount and update the balance.</p>
-<pre><code>elif choice == '2':
-    deposit_amount = float(input("Enter deposit amount: $"))
-    balance += deposit_amount
-    print("Deposit successful.")
-</code></pre>
-<h2 id="step-5-withdraw">Step 5: Withdraw</h2>
-<p>For withdrawal, prompt for the withdrawal amount and update the balance, checking for sufficient funds.</p>
-<pre><code>elif choice == '3':
-    withdraw_amount = float(input("Enter withdrawal amount: $"))
-    if withdraw_amount &lt;= balance:
-        balance -= withdraw_amount
-        print("Withdrawal successful.")
-    else:
-        print("Insufficient funds.")
-</code></pre>
-<h2 id="step-6-error-checking">Step 6: Error Checking</h2>
-<p>Finally, we need to handle invalid user input by displaying an error message.</p>
-<pre><code>else:
-    print("Invalid choice. Please enter a number between 1 and 4.")
+<h2 id="step-4-generate-insults">Step 4: Generate Insults</h2>
+<p>Generate the specified number of insults and display them to the user.</p>
+<pre><code>for _ in range(num_insults):
+    print(generate_insult())
 </code></pre>
 <h2 id="final-code">Final Code</h2>
-<pre><code># Initialize balance
-balance = 0
+<pre><code>import random
 
-# Function to display options
-def display_options():
-    print("Select an option:")
-    print("1. Check Balance")
-    print("2. Deposit")
-    print("3. Withdraw")
-    print("4. Exit")
+adjectives = ['base-court', 'villainous', 'bootless', 'fusty']
+nouns = ['swag-bellied', 'flap-mouthed', 'hedge-born', 'milk-livered', 'canker-blossom']
 
-# Start an infinite loop to keep the ATM running until the user chooses to exit
-while True:
-    # Display options to the user
-    display_options()
+def generate_insult():
+    adjective = random.choice(adjectives)
+    noun = random.choice(nouns)
+    return f"Thou {adjective} {noun}!"
 
-    # Get user choice
-    choice = input("Enter choice (1-4): ")
-    # Check user's choice
-    if choice == '1':
-        print("Your balance is: $", balance)
-    elif choice == '2':
-        deposit_amount = float(input("Enter deposit amount: $"))
-        balance += deposit_amount
-        print("Deposit successful.")
-    elif choice == '3':
-        withdraw_amount = float(input("Enter withdrawal amount: $"))
-        if withdraw_amount &lt;= balance:
-            balance -= withdraw_amount
-            print("Withdrawal successful.")
-        else:
-            print("Insufficient funds.")
+num_insults = int(input("Enter the number of insults to generate: "))
 
-    else:
-        print("Invalid choice. Please enter a number between 1 and 4.")
+for _ in range(num_insults):
+    print(generate_insult())
 </code></pre>
 <h2 id="challenges">Challenges</h2>
 <ol>
-<li>Add a PIN system. Before the options are displayed to the user, get the user to enter their pin. You may create a variable to store the PIN number (1HP).</li>
-<li>Add an option for converting different currency type (2HP).</li>
-<li>Add an algorithm to record down every transaction into an array(list) and add an option for user to pick to show their transaction history. (3HP)</li>
-</ol>
-<p>Send your full code to my chat for me to check and claim your house point.</p></div>
+<li>Search for more adjectives and nouns to expand your list. (1HP)</li>
+<li>Change the adjectives and nouns to other style of insults such as Irish or Elizabethan-era. (1HP)</li>
+</ol></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../p_parcel_check/" class="btn btn-neutral float-left" title="Project: Parcel Checking"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../p_insult_generator/" class="btn btn-neutral float-right" title="Project: Shakespeare Insult Generator">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../p_atm_machine/" class="btn btn-neutral float-left" title="Project: ATM Machine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -241,10 +191,8 @@ while True:
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../p_parcel_check/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../p_atm_machine/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../p_insult_generator/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

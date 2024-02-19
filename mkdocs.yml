@@ -1,5 +1,11 @@
 site_name: "Python Project-based Based Guide"
 nav:
+  - 'Standard Method of Algorithm':
+    - basic_1_totalling.md
+    - basic_2_counting.md
+    - basic_3_max_min_average.md
+    - basic_4_linear_search.md
+    - basic_5_bubble_sort.md
   - 'Guess the Word': 
     - p_guess_the_word.md
   - 'Calculator':
@@ -8,6 +14,8 @@ nav:
     - p_parcel_check.md
   - 'ATM Machine':
     - p_atm_machine.md
+  - 'Shakespear Insult Generator':
+    - p_insult_generator.md
 
 theme: 
   name: readthedocs

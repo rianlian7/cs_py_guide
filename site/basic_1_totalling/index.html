@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Totalling - Python Project-based Based Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Totalling";
+        var mkdocs_page_input_path = "basic_1_totalling.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Python Project-based Based Guide
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Standard Method of Algorithm</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Totalling</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-set-up-the-basic-structure">Step 1: Set Up the Basic Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-list-of-item-prices">Step 2: List of item prices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-iterate-through-the-loop">Step 3: Iterate through the loop</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-display-the-total-price">Step 4: Display the total price</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-code">Final Code</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_2_counting/">Counting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_3_max_min_average/">Max Min Average</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_4_linear_search/">Linear Search</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_5_bubble_sort/">Bubble Sort</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guess the Word</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_guess_the_word/">Project: Guess the word</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Calculator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_calculator/">Project: Calculator</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Parcel Check</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_parcel_check/">Project: Parcel Checking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ATM Machine</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_atm_machine/">Project: ATM Machine</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shakespear Insult Generator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../p_insult_generator/">Project: Shakespeare Insult Generator</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Python Project-based Based Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Standard Method of Algorithm</li>
+      <li class="breadcrumb-item active">Totalling</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="totalling">Totalling</h1>
+<h2 id="step-1-set-up-the-basic-structure">Step 1: Set Up the Basic Structure</h2>
+<ul>
+<li>Initialize a variable total_price to keep track of the total price of all the items purchased.</li>
+<li>Use the assignment operator = to assign the value 0 to the variable total_price.<pre><code># Set up basic structure
+total_price = 0
+</code></pre>
+</li>
+</ul>
+<h2 id="step-2-list-of-item-prices">Step 2: List of item prices</h2>
+<ul>
+<li>We are provided with a list of item prices.<pre><code># List of item prices
+item_prices = [10.99, 5.75, 8.50, 12.25, 6.99]
+</code></pre>
+</li>
+</ul>
+<h2 id="step-3-iterate-through-the-loop">Step 3: Iterate through the loop</h2>
+<ul>
+<li>We use a <strong>for loop</strong> to iterate through each item price in the list and add it to the <em>total_price</em> variable.<pre><code># Iterate through each item price in the list
+for price in item_prices:
+    total_price += price
+</code></pre>
+</li>
+</ul>
+<h2 id="step-4-display-the-total-price">Step 4: Display the total price</h2>
+<ul>
+<li>Display the calculated total price to the user using the print() function.<pre><code># Display the total price
+print("Total price: $", total_price)
+</code></pre>
+</li>
+</ul>
+<h2 id="final-code">Final Code</h2>
+<pre><code># Set up basic structure
+total_price = 0
+
+# List of item prices
+item_prices = [10.99, 5.75, 8.50, 12.25, 6.99]
+
+# Iterate through each item price in the list
+for price in item_prices:
+    total_price += price
+
+# Display the total price
+print("Total price: $", total_price)
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basic_2_counting/" class="btn btn-neutral float-right" title="Counting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="../basic_2_counting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
