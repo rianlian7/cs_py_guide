@@ -145,21 +145,21 @@ print("5. 3-5 days delivery")
 choice = int(input("Enter choice (1-5): "))
 </code></pre>
 <h2 id="step-4-calculate-the-cost">Step 4: Calculate the cost</h2>
-<p>Based on the user's choice of delivery option, calculate the cost of delivery.</p>
-<pre><code># Calculate cost based on delivery option
-if choice == 1:
-    cost = weight * 10 + 1
-elif choice == 2:
-    cost = weight * 10
-elif choice == 3:
-    cost = 5
-elif choice == 4:
-    cost = 4
-elif choice == 5:
-    cost = 3
-else:
-    print("Invalid choice. Please select a valid delivery option.")
-</code></pre>
+<p>Based on the user's choice of delivery option, calculate the cost of delivery.
+    cost = 0
+    # Calculate cost based on delivery option
+    if choice == 1:
+        cost = weight * 10 + 1
+    elif choice == 2:
+        cost = weight * 10
+    elif choice == 3:
+        cost = 5
+    elif choice == 4:
+        cost = 4
+    elif choice == 5:
+        cost = 3
+    else:
+        print("Invalid choice. Please select a valid delivery option.")</p>
 <h2 id="step-5-output-the-cost">Step 5: Output the cost</h2>
 <pre><code># Display cost
 print("The cost of delivery is: $", cost)
@@ -181,6 +181,7 @@ if weight &gt;= 0.5 and weight &lt;= 5.0:
     # Get user choice
     choice = int(input("Enter choice (1-5): "))
 
+    cost = 0
     # Calculate cost based on delivery option
     if choice == 1:
         cost = weight * 10 + 1

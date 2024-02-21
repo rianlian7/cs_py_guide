@@ -39,7 +39,7 @@ Get the user's choice of delivery option.
 ## Step 4: Calculate the cost
 
 Based on the user's choice of delivery option, calculate the cost of delivery.
-
+    cost = 0
     # Calculate cost based on delivery option
     if choice == 1:
         cost = weight * 10 + 1
@@ -78,7 +78,8 @@ After completing all the steps, the code will function as a parcel checking prog
 
         # Get user choice
         choice = int(input("Enter choice (1-5): "))
-
+        
+        cost = 0
         # Calculate cost based on delivery option
         if choice == 1:
             cost = weight * 10 + 1
