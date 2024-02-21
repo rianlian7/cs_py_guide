@@ -78,6 +78,8 @@ After completing all the steps, the code will function as a parcel checking prog
 
     # Get user choice
     choice = int(input("Enter choice (1-5): "))
+    # Check parcel weight
+    weight = float(input("Enter the weight of the parcel (in kg): "))
 
     # Calculate cost based on delivery option
     if choice == 1:
