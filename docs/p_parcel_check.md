@@ -38,10 +38,6 @@ Get the user's choice of delivery option.
 
 Based on the user's choice of delivery option, calculate the cost of delivery.
 
-
-    # Check parcel weight
-    weight = float(input("Enter the weight of the parcel (in kg): "))
-    
     # Calculate cost based on delivery option
     if choice == 1:
         cost = weight * 10 + 1
@@ -66,37 +62,39 @@ After completing all the steps, the code will function as a parcel checking prog
 
 ## Final code
 
-
-
-    # Display delivery options
-    print("Select a delivery option:")
-    print("1. Guaranteed next day delivery before noon")
-    print("2. Guaranteed next day delivery")
-    print("3. 24-hour delivery")
-    print("4. 48-hour delivery")
-    print("5. 3-5 days delivery")
-
-    # Get user choice
-    choice = int(input("Enter choice (1-5): "))
     # Check parcel weight
     weight = float(input("Enter the weight of the parcel (in kg): "))
 
-    # Calculate cost based on delivery option
-    if choice == 1:
-        cost = weight * 10 + 1
-    elif choice == 2:
-        cost = weight * 10
-    elif choice == 3:
-        cost = 5
-    elif choice == 4:
-        cost = 4
-    elif choice == 5:
-        cost = 3
-    else:
-        print("Invalid choice. Please select a valid delivery option.")
+    if weight > 0.5 and weight < 5.0:
+        # Display delivery options
+        print("Select a delivery option:")
+        print("1. Guaranteed next day delivery before noon")
+        print("2. Guaranteed next day delivery")
+        print("3. 24-hour delivery")
+        print("4. 48-hour delivery")
+        print("5. 3-5 days delivery")
 
-    # Display cost
-    print("The cost of delivery is: $", cost)
+        # Get user choice
+        choice = int(input("Enter choice (1-5): "))
+
+        # Calculate cost based on delivery option
+        if choice == 1:
+            cost = weight * 10 + 1
+        elif choice == 2:
+            cost = weight * 10
+        elif choice == 3:
+            cost = 5
+        elif choice == 4:
+            cost = 4
+        elif choice == 5:
+            cost = 3
+        else:
+            print("Invalid choice. Please select a valid delivery option.")
+
+        # Display cost
+        print("The cost of delivery is: $", cost)
+    else:
+        print("Parcel is rejected")
 
 
 
