@@ -65,7 +65,7 @@ After completing all the steps, the code will function as a parcel checking prog
     # Check parcel weight
     weight = float(input("Enter the weight of the parcel (in kg): "))
 
-    if weight > 0.5 and weight < 5.0:
+    if weight >= 0.5 and weight <= 5.0:
         # Display delivery options
         print("Select a delivery option:")
         print("1. Guaranteed next day delivery before noon")
