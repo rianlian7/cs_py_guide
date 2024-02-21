@@ -126,11 +126,13 @@
 <p>Prompt the user to enter the weight of the parcel.</p>
 <pre><code># Check parcel weight
 weight = float(input("Enter the weight of the parcel (in kg): "))
+
+if weight &gt;= 0.5 and weight &lt;= 5.0:
+    # Display delivery options
 </code></pre>
 <h2 id="step-2-display-delivery-options">Step 2: Display Delivery Options</h2>
 <p>Display a menu of delivery options for the user to choose from.</p>
-<pre><code># Display delivery options
-print("Select a delivery option:")
+<pre><code>print("Select a delivery option:")
 print("1. Guaranteed next day delivery before noon")
 print("2. Guaranteed next day delivery")
 print("3. 24-hour delivery")

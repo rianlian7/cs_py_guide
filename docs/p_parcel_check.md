@@ -14,11 +14,13 @@ Prompt the user to enter the weight of the parcel.
     # Check parcel weight
     weight = float(input("Enter the weight of the parcel (in kg): "))
 
+    if weight >= 0.5 and weight <= 5.0:
+        # Display delivery options
+
 ## Step 2: Display Delivery Options
 
 Display a menu of delivery options for the user to choose from.
 
-    # Display delivery options
     print("Select a delivery option:")
     print("1. Guaranteed next day delivery before noon")
     print("2. Guaranteed next day delivery")
