@@ -1,4 +1,4 @@
-# Project: Parcel Checking
+# Parcel Checking
 
 The Parcel project is a Python program that:
 

@@ -1,4 +1,4 @@
-# Project: Shakespeare Insult Generator
+# Shakespeare Insult Generator
 
 This project involves creating a program that generates random insults inspired by the language of Shakespeare.
 

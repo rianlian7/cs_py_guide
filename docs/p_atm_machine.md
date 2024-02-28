@@ -1,4 +1,4 @@
-# Project: ATM Machine
+# ATM Machine
 
 Always read and try out your code each step.
 

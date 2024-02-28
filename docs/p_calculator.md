@@ -1,4 +1,4 @@
-# Project: Calculator
+# Calculator
 
 ## Step 1: Set Up the Basic Structure
 

@@ -1,4 +1,4 @@
-# Project: Guess the word
+# Guess the word
 
 *Reminder*: Do not copy paste all the code in each step. Read the instructions, some code are not meant to be rewritten but to let you know where to put the new code.
 

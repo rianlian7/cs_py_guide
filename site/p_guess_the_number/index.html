@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Bubble Sort - Python Project-based Based Guide</title>
+    <title>Number Guessing Game - Python Project-based Based Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Bubble Sort";
-        var mkdocs_page_input_path = "basic_5_bubble_sort.md";
+        var mkdocs_page_name = "Number Guessing Game";
+        var mkdocs_page_input_path = "p_guess_the_number.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -46,7 +46,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Standard Method of Algorithm</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../basic_1_totalling/">Totalling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../basic_2_counting/">Counting</a>
@@ -55,24 +55,28 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../basic_4_linear_search/">Linear Search</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Bubble Sort</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#step-1-set-up-the-list-of-numeric-data">Step 1: Set up the list of numeric data.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-2-implement-bubble-sort">Step 2: Implement Bubble Sort</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-3-display-sorted-data">Step 3: Display sorted data</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#step-4-test-the-code">Step 4: Test the code</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#final-code">Final Code</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_5_bubble_sort/">Bubble Sort</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Projects</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../p_guess_the_number/">Number Guessing Game</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Number Guessing Game</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-set-up-the-game">Step 1: Set Up the Game</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-generate-the-random-number">Step 2: Generate the Random Number</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-prompt-the-user-for-guesses">Step 3: Prompt the User for Guesses</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-repeat-until-correct-guess">Step 4: Repeat until correct guess</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-code">Final Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#challenges">Challenges</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../p_guess_the_word/">Guess the word</a>
                   </li>
@@ -99,8 +103,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Standard Method of Algorithm</li>
-      <li class="breadcrumb-item active">Bubble Sort</li>
+          <li class="breadcrumb-item">Projects</li>
+      <li class="breadcrumb-item active">Number Guessing Game</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -109,81 +113,80 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div><h1 id="bubble-sort">Bubble Sort</h1>
-<h2 id="step-1-set-up-the-list-of-numeric-data">Step 1: Set up the list of numeric data.</h2>
-<ul>
-<li>Begin by defining a list of numeric data to be sorted.<pre><code># Define the list of numeric data
-data = [8, 5, 2, 9, 3, 6, 1, 4, 7]
+                <div><h1 id="number-guessing-game">Number Guessing Game</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this guide, you will learn how to create a simple number guessing game using Python.</p>
+<h2 id="step-1-set-up-the-game">Step 1: Set Up the Game</h2>
+<p>First, let's set up the game by defining the minimum and maximum values for the range of numbers to guess.</p>
+<pre><code># Define the range of numbers
+min_number = 1
+max_number = 100
 </code></pre>
-</li>
-</ul>
-<h2 id="step-2-implement-bubble-sort">Step 2: Implement Bubble Sort</h2>
-<pre><code># Set the first index of the data list
-first = 0
+<h2 id="step-2-generate-the-random-number">Step 2: Generate the Random Number</h2>
+<p>Next, generate a random number within the defined range for the player to guess.</p>
+<pre><code>import random
 
-# Set the last index of the data list
-last = len(data)
-
-# Start the bubble sort loop
-while True:
-    # Initialize a variable to track whether a swap has occurred
-    swap = False
-
-    # Iterate through the data list
-    for index in range(first, last - 1):
-        # Compare adjacent elements and swap them if necessary
-        if data[index] &gt; data[index + 1]:
-            temp = data[index]       # Store the value of the current element in a temporary variable
-            data[index] = data[index + 1]  # Replace the current element with the next element
-            data[index + 1] = temp   # Replace the next element with the stored value
-            swap = True             # Set swap flag to indicate that a swap occurred
-
-    # Move the last index one step to the left
-    last -= 1
-
-    # Check if a swap has occurred or if the last index has reached the first index
-    if not swap or last == 1:
-        break   # Exit the loop if no swap occurred or if the last index is equal to the first index
+# Generate a random number
+secret_number = random.randint(min_number, max_number)
 </code></pre>
-<h2 id="step-3-display-sorted-data">Step 3: Display sorted data</h2>
-<ul>
-<li>Display the sorted data after applying the Bubble Sort algorithm.<pre><code># Display sorted data
-print("Sorted Data:", data)
+<h2 id="step-3-prompt-the-user-for-guesses">Step 3: Prompt the User for Guesses</h2>
+<p>Prompt the user to guess the number and provide feedback on whether the guess is too high, too low, or correct.</p>
+<pre><code># Prompt the user to guess the number
+guess = int(input(f"Guess a number between {min_number} and {max_number}: "))
+
+# Check if the guess is correct
+if guess == secret_number:
+    print("Congratulations! You guessed the number correctly!")
+elif guess &lt; secret_number:
+    print("Too low! Try again.")
+else:
+    print("Too high! Try again.")
 </code></pre>
-</li>
-</ul>
-<h2 id="step-4-test-the-code">Step 4: Test the code</h2>
-<ul>
-<li>Run the code, it should return a list of number in ascending order.</li>
-</ul>
+<h2 id="step-4-repeat-until-correct-guess">Step 4: Repeat until correct guess</h2>
+<p>Repeat the guessing process until the user correctly guesses the secret number.</p>
+<p>Add a <em>while</em> statement before the <em>if</em> statement. Make sure to <strong>indent</strong> your code below the while statement.</p>
+<pre><code># Repeat until correct guess
+while guess != secret_number:
+</code></pre>
 <h2 id="final-code">Final Code</h2>
-<pre><code># Define the list of numeric data
-data = [8, 5, 2, 9, 3, 6, 1, 4, 7]
+<pre><code>import random
 
-# Implement Bubble Sort
-first = 0
-last = len(data)
-while True:
-    swap = False
-    for index in range(first, last - 1):
-        if data[index] &gt; data[index + 1]:
-            temp = data[index]
-            data[index] = data[index + 1]
-            data[index + 1] = temp
-            swap = True
-    last -= 1
-    if not swap or last == 1:
-        break
+# Define the range of numbers
+min_number = 1
+max_number = 100
 
-# Display sorted data
-print("Sorted Data:", data)
-</code></pre></div>
+# Generate a random number
+secret_number = random.randint(min_number, max_number)
+
+# Prompt the user to guess the number
+guess = int(input(f"Guess a number between {min_number} and {max_number}: "))
+
+
+# Repeat until correct guess
+while guess != secret_number:
+    guess = int(input("Try again: "))
+    if guess &lt; secret_number:
+        print("Too low! Try again.")
+    elif guess &gt; secret_number:
+        print("Too high! Try again.")
+    else:
+        print("Congratulations! You guessed the number correctly!")
+</code></pre>
+<h2 id="challenges">Challenges</h2>
+<ol>
+<li>
+<p>Limited Attempts: Modify the game to allow the player only a certain number of attempts to guess the number before revealing the correct answer. (2HP)</p>
+</li>
+<li>
+<p>Difficulty Levels: Implement different difficulty levels (e.g., easy, medium, hard) where the range of numbers to guess from varies accordingly. (3HP)</p>
+</li>
+</ol></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../basic_4_linear_search/" class="btn btn-neutral float-left" title="Linear Search"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../p_guess_the_number/" class="btn btn-neutral float-right" title="Number Guessing Game">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../basic_5_bubble_sort/" class="btn btn-neutral float-left" title="Bubble Sort"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../p_guess_the_word/" class="btn btn-neutral float-right" title="Guess the word">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -206,10 +209,10 @@ print("Sorted Data:", data)
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../basic_4_linear_search/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../basic_5_bubble_sort/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../p_guess_the_number/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../p_guess_the_word/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
